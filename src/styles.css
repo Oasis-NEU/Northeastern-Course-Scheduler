@@ -1,0 +1,114 @@
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Add a new class for the container to center its children */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+/* Center the form horizontally within the container */
+.new-class-form {
+  margin: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.form-row label {
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-row select {
+  width: 120px;
+}
+
+.Add {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Add:hover {
+  background-color: #0056b3;
+}
+
+/* Course List */
+.header {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 7px;
+  text-align: center;
+}
+
+/* Add this style to set a max width and center the list container */
+.list-container {
+  max-width: 600px; /* Set the desired maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  display: grid; /* Set the container as a grid */
+  gap: 10px; /* Add a gap between grid items */
+}
+
+/* Remove the list style from the default styles to remove bullets */
+.list {
+  padding: 0; /* Remove default padding */
+}
+
+/* Course List (Update the styles for grid items) */
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #b02a37;
+}
+
+.course-name {
+  font-weight: bold;
+}
