@@ -17,10 +17,10 @@ export function CourseForm({ onSubmit }) {
   return (
     <form className="new-class-form" onSubmit={handleSubmit}>
       <div className="form-row">
-        <label htmlFor="class">Course</label>
+        <label htmlFor="course">Course</label>
         <input
           type="text"
-          id="class"
+          id="course"
           value={newCourse}
           onChange={(e) => setNewCourse(e.target.value)}
         />
