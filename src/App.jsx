@@ -1,19 +1,10 @@
 import { CourseForm } from "./components/CourseForm";
 import { CourseList } from "./components/CourseList";
 import "./styles.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function App() {
-  const [courses, setCourses] = useState(() => {
-    const localValue = localStorage.getItem("courses");
-    if (localValue === null) return [];
-
-    return JSON.parse(localValue);
-  });
-
-  useEffect(() => {
-    localStorage.setItem("courses", JSON.stringify(courses));
-  }, [courses]);
+  const [courses, setCourses] = useState([]);
 
   function addCourse(name, day) {
     setCourses((currentCourses) => {
