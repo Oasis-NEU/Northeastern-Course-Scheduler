@@ -1,10 +1,10 @@
-export function Course({ id, name, day, deleteCourse }) {
+export function Course({ name, day, deleteCourse }) {
   return (
-    <li key={id}>
+    <li>
       <label>
         <span className="course-name">{name}</span> on {day}
       </label>
-      <button className="delete-button" onClick={() => deleteCourse(id)}>
+      <button className="delete-button" onClick={() => deleteCourse(name, day)}>
         Delete
       </button>
     </li>

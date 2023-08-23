@@ -8,17 +8,17 @@ export default function App() {
 
   function addCourse(name, day) {
     setCourses((currentCourses) => {
-      return [...currentCourses, { id: crypto.randomUUID(), name, day }];
+      return [...currentCourses, { name, day }];
     });
   }
 
-  function deleteCourse(id) {
+  function deleteCourse(name, day) {
     setCourses((currentCourses) => {
-      return currentCourses.filter((course) => course.id !== id);
+      return currentCourses.filter(
+        (course) => !(course.name === name && course.day === day)
+      );
     });
   }
-
-  console.log(courses);
 
   return (
     <>
